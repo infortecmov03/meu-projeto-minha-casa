@@ -1,0 +1,95 @@
+{
+  "system": {
+    "name": "StructuralCAD Pro Universal",
+    "version": "1.0.0",
+    "license": "Professional"
+  },
+  
+  "import": {
+    "supportedFormats": {
+      "3D": ["blend", "dwg", "dxf", "skp", "rvt", "ifc", "3ds", "max", "mb", "ma", "sh3d", "3dm", "fbx", "obj", "gltf", "glb", "stl", "ply", "dae", "usdz", "x3d"],
+      "2D": ["dwg", "dxf", "pdf", "svg", "ai"],
+      "Image": ["jpg", "png", "bmp", "tga", "tiff", "hdr", "exr", "psd"],
+      "Project": ["json", "xml", "csv"]
+    },
+    "maxFileSize": 104857600, 
+    "autoConvertTextures": true,
+    "preserveLayers": true,
+    "importUnits": "meters"
+  },
+  
+  "export": {
+    "video": {
+      "formats": ["mp4", "webm", "avi", "mov"],
+      "resolutions": ["480p", "720p", "1080p", "2K", "4K"],
+      "fpsOptions": [24, 30, 60, 120],
+      "compression": "h264",
+      "maxDuration": 3600 
+    },
+    "model": {
+      "formats": ["gltf", "glb", "fbx", "obj", "dwg", "dxf", "ifc"],
+      "includeAnimations": true,
+      "includeTextures": true,
+      "optimizeGeometry": true
+    }
+  },
+  
+  "simulation": {
+    "construction": {
+      "autoGenerateTimeline": true,
+      "defaultWorkers": 10,
+      "defaultEquipment": ["excavator", "crane", "concrete_mixer", "truck"],
+      "weatherEffects": true,
+      "dayNightCycle": true,
+      "showConstructionLabels": true
+    },
+    "physics": {
+      "gravity": 9.81,
+      "friction": 0.5,
+      "restitution": 0.3,
+      "solverIterations": 10
+    }
+  },
+  
+  "character": {
+    "modes": ["first_person", "third_person", "top_down", "fly", "drive"],
+    "defaultHeight": 1.8,
+    "defaultSpeed": 5.0,
+    "jumpForce": 7.0,
+    "enableClimbing": true,
+    "enableSwimming": false,
+    "inventorySize": 20
+  },
+  
+  "rendering": {
+    "quality": "high",
+    "shadowQuality": "high",
+    "antialiasing": "msaa4x",
+    "textureFiltering": "anisotropic",
+    "maxLights": 8,
+    "reflections": true,
+    "ambientOcclusion": true,
+    "bloom": true,
+    "motionBlur": false
+  },
+  
+  "performance": {
+    "maxFPS": 144,
+    "targetFPS": 60,
+    "culling": true,
+    "lodEnabled": true,
+    "lodDistances": [10, 25, 50, 100],
+    "textureCompression": true,
+    "geometryCompression": true
+  },
+  
+  "paths": {
+    "projects": "./projects",
+    "imports": "./imports",
+    "exports": "./exports",
+    "templates": "./templates",
+    "textures": "./assets/textures",
+    "models": "./assets/models",
+    "videos": "./videos"
+  }
+}
